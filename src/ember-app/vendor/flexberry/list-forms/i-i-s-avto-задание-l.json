@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avto-задание-e",
+  "editForm": "i-i-s-avto-задание-e",
+  "external": false,
+  "caption": "Задание",
+  "name": "IISAvtoЗаданиеL",
+  "className": "ЗаданиеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-задание",
+      "modelProjection": "ЗаданиеL"
+    }
+  ]
+}

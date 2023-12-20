@@ -1,0 +1,60 @@
+﻿{
+  "name": "IISAvtoБДМатериалов",
+  "modelName": "i-i-s-avto-б-д-материалов",
+  "className": "БДМатериалов",
+  "nameSpace": "IIS.Avto",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "материалы",
+      "relatedTo": "i-i-s-avto-материалы",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "курс",
+      "relatedTo": "i-i-s-avto-курс",
+      "inverse": "бДМатериалов"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "БДМатериаловE",
+      "modelName": "i-i-s-avto-б-д-материалов",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Содержание",
+          "lookupValueField": "содержание",
+          "relationName": "Материалы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "содержание",
+              "caption": "Содержание",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Материалы",
+          "name": "материалы",
+          "relatedTo": "i-i-s-avto-материалы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

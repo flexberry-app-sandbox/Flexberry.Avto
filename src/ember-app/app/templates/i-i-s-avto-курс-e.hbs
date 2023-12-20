@@ -1,0 +1,97 @@
+<h3 class="ui header">{{t "forms.i-i-s-avto-курс-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.iD
+      class=(if (v-get validationModel "iD" "isInvalid") "error")
+      label=(t "forms.i-i-s-avto-курс-e.iD-caption")
+      data-test-i-i-s-avto-курс-e-iD=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "iD" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.название
+      class=(if (v-get validationModel "название" "isInvalid") "error")
+      label=(t "forms.i-i-s-avto-курс-e.название-caption")
+      data-test-i-i-s-avto-курс-e-название=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "название" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-avto-курс-e.преподаватель-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.преподаватель
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="преподаватель"
+      projection="ПреподавательL"
+      title=(t "forms.i-i-s-avto-курс-e.преподаватель-caption")
+      readonly=readonly
+      componentName="преподавательLookup"
+      class=(if (v-get validationModel "преподаватель" "isInvalid") "error")
+      data-test-i-i-s-avto-курс-e-преподаватель=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "преподаватель" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-avto-курс-e.задание-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.задание
+      displayAttributeName="описание"
+      autocomplete=true
+      relationName="задание"
+      projection="ЗаданиеL"
+      title=(t "forms.i-i-s-avto-курс-e.задание-caption")
+      readonly=readonly
+      componentName="заданиеLookup"
+      class=(if (v-get validationModel "задание" "isInvalid") "error")
+      data-test-i-i-s-avto-курс-e-задание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "задание" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-avto-курс-e.бДМатериалов-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="бДМатериаловGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.бДМатериалов
+      content=model.бДМатериалов
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "бДМатериалов" "isInvalid") "error")
+      data-test-i-i-s-avto-курс-e-бДМатериалов=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "бДМатериалов" "message")}}
+  </div>
+</form>

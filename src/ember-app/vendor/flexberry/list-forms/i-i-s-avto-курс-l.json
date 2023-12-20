@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avto-курс-e",
+  "editForm": "i-i-s-avto-курс-e",
+  "external": false,
+  "caption": "Курс",
+  "name": "IISAvtoКурсL",
+  "className": "КурсL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-курс",
+      "modelProjection": "КурсL"
+    }
+  ]
+}

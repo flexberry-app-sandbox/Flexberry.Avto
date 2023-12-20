@@ -1,0 +1,76 @@
+<h3 class="ui header">{{t "forms.i-i-s-avto-заявка-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.iD
+      class=(if (v-get validationModel "iD" "isInvalid") "error")
+      label=(t "forms.i-i-s-avto-заявка-e.iD-caption")
+      data-test-i-i-s-avto-заявка-e-iD=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "iD" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.содержание
+      class=(if (v-get validationModel "содержание" "isInvalid") "error")
+      label=(t "forms.i-i-s-avto-заявка-e.содержание-caption")
+      data-test-i-i-s-avto-заявка-e-содержание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "содержание" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-avto-заявка-e.датаСдачи-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаСдачи
+      class=(if (v-get validationModel "датаСдачи" "isInvalid") "error")
+      data-test-i-i-s-avto-заявка-e-датаСдачи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаСдачи" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-avto-заявка-e.студент-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.студент
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="студент"
+      projection="СтудентL"
+      title=(t "forms.i-i-s-avto-заявка-e.студент-caption")
+      readonly=readonly
+      componentName="студентLookup"
+      class=(if (v-get validationModel "студент" "isInvalid") "error")
+      data-test-i-i-s-avto-заявка-e-студент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "студент" "message")}}
+  </div>
+</form>

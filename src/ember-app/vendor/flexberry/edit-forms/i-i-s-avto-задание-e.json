@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Заявка",
+      "projection": "ЗаявкаL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Задание",
+  "name": "IISAvtoЗаданиеE",
+  "className": "ЗаданиеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-задание",
+      "modelProjection": "ЗаданиеE"
+    }
+  ]
+}

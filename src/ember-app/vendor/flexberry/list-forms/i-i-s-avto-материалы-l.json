@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avto-материалы-e",
+  "editForm": "i-i-s-avto-материалы-e",
+  "external": false,
+  "caption": "Материалы",
+  "name": "IISAvtoМатериалыL",
+  "className": "МатериалыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-материалы",
+      "modelProjection": "МатериалыL"
+    }
+  ]
+}

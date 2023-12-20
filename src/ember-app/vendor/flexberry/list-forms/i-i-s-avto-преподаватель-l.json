@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avto-преподаватель-e",
+  "editForm": "i-i-s-avto-преподаватель-e",
+  "external": false,
+  "caption": "Преподаватель",
+  "name": "IISAvtoПреподавательL",
+  "className": "ПреподавательL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-преподаватель",
+      "modelProjection": "ПреподавательL"
+    }
+  ]
+}

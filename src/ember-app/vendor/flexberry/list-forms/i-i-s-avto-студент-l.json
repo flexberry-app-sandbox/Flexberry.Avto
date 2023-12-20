@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-avto-студент-e",
+  "editForm": "i-i-s-avto-студент-e",
+  "external": false,
+  "caption": "Студент",
+  "name": "IISAvtoСтудентL",
+  "className": "СтудентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-студент",
+      "modelProjection": "СтудентL"
+    }
+  ]
+}

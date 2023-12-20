@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Студент",
+  "name": "IISAvtoСтудентE",
+  "className": "СтудентE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-студент",
+      "modelProjection": "СтудентE"
+    }
+  ]
+}

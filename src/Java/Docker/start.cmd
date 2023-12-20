@@ -1,0 +1,1 @@
+docker-compose -p avto-java up -d

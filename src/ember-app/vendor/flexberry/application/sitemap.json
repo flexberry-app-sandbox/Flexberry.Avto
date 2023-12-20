@@ -1,0 +1,57 @@
+﻿{
+  "applicationCaption": "Avto",
+  "applicationTitle": "Avto",
+  "items": [
+    {
+      "link": null,
+      "menuName": "avto",
+      "caption": "Avto",
+      "title": "Avto",
+      "children": [
+        {
+          "link": "i-i-s-avto-курс-l",
+          "menuName": null,
+          "caption": "Курс",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-avto-задание-l",
+          "menuName": null,
+          "caption": "Задание",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-avto-студент-l",
+          "menuName": null,
+          "caption": "Студент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-avto-преподаватель-l",
+          "menuName": null,
+          "caption": "Преподаватель",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-avto-материалы-l",
+          "menuName": null,
+          "caption": "Материалы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-avto-заявка-l",
+          "menuName": null,
+          "caption": "Заявка",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

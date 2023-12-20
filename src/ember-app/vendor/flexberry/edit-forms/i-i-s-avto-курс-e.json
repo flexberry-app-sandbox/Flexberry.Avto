@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Преподаватель",
+      "projection": "ПреподавательL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Задание",
+      "projection": "ЗаданиеL",
+      "detailModelName": null
+    },
+    {
+      "master": "материалы",
+      "displayAttributeName": "содержание",
+      "required": true,
+      "relationName": "БДМатериалов.Материалы",
+      "projection": "МатериалыL",
+      "detailModelName": "i-i-s-avto-б-д-материалов"
+    }
+  ],
+  "external": false,
+  "caption": "Курс",
+  "name": "IISAvtoКурсE",
+  "className": "КурсE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-avto-курс",
+      "modelProjection": "КурсE"
+    }
+  ]
+}
